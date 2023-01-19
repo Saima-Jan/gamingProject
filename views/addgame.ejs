@@ -1,0 +1,32 @@
+<%- include ('partials/header') %>
+
+
+<h1>Add a game here!</h1>
+ 
+<form action="/addgame" method="POST" enctype="multipart/form-data">
+  <div class="form-group">
+    <label>Name</label>
+    <input type="text" class="form-control" placeholder="Run 3" name="title">
+  </div>
+  <div class="form-group">
+    <label>Creator</label>
+    <input type="text" class="form-control" placeholder="light_bringer777" name="creator">
+  </div>
+  <div class="form-group">
+    <label>Size</label>
+    <input type="text" class="form-control" placeholder="width" name="width">
+    <input type="text" class="form-control" placeholder="height" name="height">
+  </div>
+  <h3>Upload your files</h3>
+  <div class="input-group mb-3">
+    <input type="file" class="form-control" id="gameInput" name="gamefile" placeholder="game file (.swf)">
+    <label class="input-group-text" for="gameInput">Game File(.swf)</label>
+  </div>
+  <div class="input-group mb-3">
+    <input type="file" class="form-control" id="imageInput" name="imagefile" placeholder="image file">
+    <label class="input-group-text" for="imageInput">Image file</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<%- include ('partials/footer') %>
